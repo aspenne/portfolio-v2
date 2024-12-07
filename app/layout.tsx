@@ -1,3 +1,5 @@
+import { CommandCustom } from "@/components/custom/command";
+import { Sidebar } from "@/components/custom/sidebar";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
@@ -28,7 +30,8 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <CommandCustom />
+        <Sidebar children={children}/>
       </body>
     </html>
   );
